@@ -4,7 +4,7 @@
 * **GitHub 링크:** https://github.com/minji-sudo/C_Assignment3/blob/main/main.c
                    https://github.com/minji-sudo/C_Assignment3/blob/main/my_math.c
 
-## 3. 시간 복잡도 및 Big-O 계산
+## 2. 시간 복잡도 및 Big-O 계산
 사용한 알고리즘 : 두 수의 최대공약수를 구하기 위해 유클리드 호제법(Euclidean Algorithm)을 사용하였다. 
 이 알고리즘은 큰 수를 작은 수로 나눈 나머지를 구하고, 다시 그 작은 수를 방금 구한 나머지와 나누는 과정을 반복하여 나머지가 0이 될 때의 나누는 수를 찾는 방식이다.
 
