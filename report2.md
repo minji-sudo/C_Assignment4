@@ -4,45 +4,9 @@
 피보나치 수열을 재귀적 방법으로 구현하고, 인접한 두 피보나치 수의 최대공약수(GCD)를 계산하는 과정에서 발생하는 실행 시간을 측정하여 알고리즘의 시간 복잡도를 검증합니다.
 
 ## 2. 구현 코드
-프로파일링을 위해 `time.h`의 `clock()` 함수를 사용하여 다음과 같이 코드를 작성하였습니다.
-
-c
-#include <stdio.h>
-#include <time.h>
-
-int fibo(int n) {
-    if (n <= 1) return n;
-    return fibo(n - 1) + fibo(n - 2);
-}
-
-int gcd(int a, int b) {
-    while (b != 0) {
-        int r = a % b;
-        a = b;
-        b = r;
-    }
-    return a;
-}
-
-int main() {
-    int n;
-    clock_t start, end;
-    double time_result;
-
-    printf("n_value | Time (sec)\n");
-    printf("--------------------\n");
-
-    for (n = 5; n <= 40; n = n + 5) {
-        start = clock(); 
-        int f1 = fibo(n);
-        int f2 = fibo(n - 1);
-        gcd(f1, f2); 
-        end = clock(); 
-        time_result = (double)(end - start) / CLOCKS_PER_SEC;
-        printf("%d       | %f\n", n, time_result);
-    }
-    return 0;
-
+다음과 같이 코드를 작성하였습니다.
+* **GitHub 소스 코드: **[main.c](./main.c)
+    
  
 ## 3. 시간 복잡도 및 Big-O 분석
 (1) 피보나치 수열 (재귀): O(2n)
